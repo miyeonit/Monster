@@ -43,11 +43,28 @@ class Monsters extends Component {
   };
 
   render() {
+    const { monsters, userInput } = this.state;
+    const searchMonster = monsters.filter((mon) =>
+      mon.name.toLowerCase().includes(userInput.toLowerCase())
+    );
     return (
       <div className="Monsters">
         <h1>컴포넌트 재사용 연습!</h1>
         <SearchBox handleChange={this.handleChange} />
-        <CardList monsters={this.state.monsters} />
+        <CardList monsters={searchMonster} key={monsters.id} />
+        {/* {monsters
+          .filter((mon) => {
+            if (
+              monsters.name
+                .toLowerCase()
+                .includes(this.state.userInput.toLowerCase())
+            ) {
+              return mon;
+            }
+          })
+          .map((mon) => {
+            return <CardList monsters={mon} key={mon.id} />;
+          })} */}
       </div>
     );
   }

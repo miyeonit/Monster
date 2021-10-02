@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Monsters from "../../Monsters";
+// import Monsters from "../../Monsters";
 import Card from "../Card/Card";
 import "./CardList.scss";
 
