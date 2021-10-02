@@ -19,8 +19,16 @@ import "./Card.scss";
 
 class Card extends Component {
   render() {
+    const { monID, monName, monEmail } = this.props;
     return (
-      <div className="card-container"></div>
+      <div className="card-container">
+        <img
+          src={`https://robohash.org/${monID}?set=set2&size=180x180`}
+          alt="monster img"
+        />
+        <h2>{monName}</h2>
+        <p>{monEmail}</p>
+      </div>
     );
   }
 }
