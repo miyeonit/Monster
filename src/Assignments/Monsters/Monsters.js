@@ -52,19 +52,6 @@ class Monsters extends Component {
         <h1>컴포넌트 재사용 연습!</h1>
         <SearchBox handleChange={this.handleChange} />
         <CardList monsters={searchMonster} key={monsters.id} />
-        {/* {monsters
-          .filter((mon) => {
-            if (
-              monsters.name
-                .toLowerCase()
-                .includes(this.state.userInput.toLowerCase())
-            ) {
-              return mon;
-            }
-          })
-          .map((mon) => {
-            return <CardList monsters={mon} key={mon.id} />;
-          })} */}
       </div>
     );
   }
